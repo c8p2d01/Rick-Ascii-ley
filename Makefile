@@ -6,7 +6,7 @@
 #    By: cdahlhof <cdahlhof@student.42wolfsburg.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/25 08:47:20 by cdahlhof          #+#    #+#              #
-#    Updated: 2022/05/27 14:40:16 by cdahlhof         ###   ########.fr        #
+#    Updated: 2022/05/27 18:06:43 by cdahlhof         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 
 troll:
 	@$$SHELL play.sh
-	@make play
+#	@make play
 
 include roll.mk
 

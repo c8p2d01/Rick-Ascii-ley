@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 RC=.$(echo $SHELL | cut -c 6-)rc
 cp RICK.mp3 $HOME/Rick.mp3
 gcc play.c -o loop
