@@ -1,5 +1,5 @@
 #!/bin/bash
-RC=".bashrc" && [[($(env | grep SHELL | cut -c 12-) = "zsh")]] && RC=".zshrc"
+RC=".zshrc" && [[($(echo $BASH) = "/bin/bash")]] && RC=".bashrc"
 cp RICK.mp3 $HOME/Rick.mp3
 gcc play.c -o loop
 cp loop $HOME/ROLL
