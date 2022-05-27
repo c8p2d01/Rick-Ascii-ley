@@ -4,9 +4,9 @@
 /*   play.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cdahlhof <cdahlhof@student.42wolfsburg.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 08:22:47 by cdahlhof          #+#    #+#             */
-/*   Updated: 2022/05/25 08:46:54 by cdahlhof         ###   ########.fr       */
+/*                                                +#+#+#+#+#+   +#+_          */
+/*   Created: 2022/05/25 08:22:47 by cdahlhof          #+#    #+# °°        */
+/*   Updated: 2022/05/25 08:46:54 by cdahlhof     \\   ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,19 @@
 #define MAGENTA "\033[0;35m"
 #define RED "\033[0;91m"
 #define YELLOW "\033[0;33m"
-#define b "\033[0;93m"
 
 int main()
 {
 	pid_t pid;
 	char	*args[] = {"/usr/bin/afplay", "--volume", "1", \
-			"Debugger.mp3", NULL};
+			"RICK.mp3", NULL};
 
 	pid = fork();
 	if (!pid)
 	{
 		execvp(args[0], args);
 	}
-	while(1)
+	for (int i = 0; i < 77; i++)
 	{
 		usleep(100000);
 		printf("\e[1;1H\e[2J%s", GREEN);
@@ -43,9 +42,9 @@ int main()
 		printf("ttttttttttttttttffffLfftffffffffLLffttttttftt111ttfffffftttttttt111111ttttttf  :+:      :+:    :+: t\n");
 		printf("ttttttttttttttttfffLfttffffffLLffffttttttttttt1tfffffffffftttttt111111tffff  +:+  +:+        +:+  t1\n");
 		printf("ttttttttttttffLfttfffttfffffffffttfftttttt1t1tt11tfffffftttttt111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfttttftfLftttttttffffttttffffttttfftt11t111tt1 +#+#+#+#+#+   +#+   111tttt\n");
-		printf("ttttttttffLLLLLLLffttfLLffttfffftfLfttttttffttt11111ttttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLfftffttttffLffftfftttttft1i;;::::;iitffffffffftt111tft1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfttttftfLftttttttffffttttffffttttfftt11t111tt1 +#+#+#+#+#+   +#+  _111tttt\n");
+		printf("ttttttttffLLLLLLLffttfLLffttfffftfLfttttttffttt11111ttttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLfftffttttffLffftfftttttft1i;;::::;iitffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttfffLLLLLLLLfttttffftffffftfttttttff1:,,,,,,,,::itfffffffft11111111ttt                   ffttt\n");
 		printf("tttffttffLLLLLLLLLfttfftffffffffLLLftttttt;::,:::;;;;::1tfffftfft11111ttt1ttt1tfttt11ttffffffffLfttt\n");
 		printf("tffffffffLLLLLLLffftfLfffttfLLffLLLfttttti;;;iii11111;:i11ttffft111111tfft11t11tt1tttttfffLLLLLLfttf\n");
@@ -87,9 +86,9 @@ int main()
 		printf("ttftttttttttttttffffLftttfffffffLLLfttttttftt111ttfffffftttttttt111111tttttff  :+:      :+:    :+: t\n");
 		printf("ttttttttttttttttfffLLttffffffLLffffttttttttttt1tffffffffffttttttt11111tffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttffffttfffttfffffffffttfftttttt1tttt1ttftfffftt1ttt111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfttttttfLftttttttfft11i;;:;;i11ttfftt11t111tt1 +#+#+#+#+#+   +#+   11ttttt\n");
-		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLLttttttfff1;,,,,,,,,:;tffffft11111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLfftffttttffLffftfftttttfft1;:,,,,,::::,;tffftttt111tft1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfttttttfLftttttttfft11i;;:;;i11ttfftt11t111tt1 +#+#+#+#+#+   +#+  _11ttttt\n");
+		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLLttttttfff1;,,,,,,,,:;tffffft11111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLfftffttttffLffftfftttttfft1;:,,,,,::::,;tffftttt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffftffffftfftttttfffti:;;;iiii11i;:tffffft11111111ttf                   ffttt\n");
 		printf("tttffttffLLLLLLLLLftffftfLftfftfLLLftttttfft::i;iiiiii11i:1ffftft11111ttt1ttt1ttttt11ttfffffLLfLfttt\n");
 		printf("ttfLfffffLLLLLLLLfftfLLfffffLfffLLLfttttt1tt;:;;;;;iiiiiii1tffft11111tffft11t11tt1tttttfffLLLLLLffff\n");
@@ -131,9 +130,9 @@ int main()
 		printf("ttftttttttttttttffffLffttfffffffLLLfttttttfttt11tffffffftttttttt111111tttttff  :+:      :+:    :+: t\n");
 		printf("ttttttttttttttttfffLLttffffffLLffffttttttttttt1ttt1iiiii1tttttttt11111tffff  +:+  +:+        +:+  t1\n");
 		printf("ttttttttttttffffttffftffffffffffttffttttt11tttt1i::,,,,,,:;111111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttfft1i;,,,,,,,,,:;ttt11t111tt1 +#+#+#+#+#+   +#+   11ttttt\n");
-		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLLtttttffffti;::;;;;;iii::1ftt11111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLftffttttffLffftffttttffffft;:;iiii11111i:iftttt111ttt1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttfft1i;,,,,,,,,,:;ttt11t111tt1 +#+#+#+#+#+   +#+  _11ttttt\n");
+		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLLtttttffffti;::;;;;;iii::1ftt11111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLftffttttffLffftffttttffffft;:;iiii11111i:iftttt111ttt1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffftffLLftfftttttffffft;:;;;;;iiiiii;1fftt11111111ttf                   ffttt\n");
 		printf("tttfftfffLLLLLLLLLftffftfLftffffLLLftttttffffti;;;;;;;ii;iiitffft11111ttt1ttt1tfttt11ttfffffLLfLfttt\n");
 		printf("ttfLfffffLLLLLLLLffffLLfffffLfffLLLLtttttttff1iii;;i;;iii111tfft111111ffft11t11tt1tttttfffLLLLLLffff\n");
@@ -175,9 +174,9 @@ int main()
 		printf("ttftttttttttttttffffLffttffffffffLLfttttttfttt11ttt1iiii;i11tttt111111tttttff  :+:      :+:    :+: t\n");
 		printf("ttttttttttttttttfffLLttffffffLLffffttttttttttt1tt1::,,,,,,:;1ttt111111tfftf  +:+  +:+        +:+  t1\n");
 		printf("ttttttttttttffffttffftffffffffffttfftttttt1ttt11i;:,,,,,,,,,:1111t1111111  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttffft1;:::;;;;;;;::it11t111tt1 +#+#+#+#+#+   +#+   11ttttt\n");
-		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLLtttttfffffti:;;ii111111i:itt11111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLftffftttffLffftffttttfffffft;:;;;;;iiiiii;ittt1111ttt1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttffft1;:::;;;;;;;::it11t111tt1 +#+#+#+#+#+   +#+  _11ttttt\n");
+		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLLtttttfffffti:;;ii111111i:itt11111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLftffftttffLffftffttttfffffft;:;;;;;iiiiii;ittt1111ttt1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffftffLLftfftttttffffffti;;;;;;;ii;iiitttt11111111ttf                   ffttt\n");
 		printf("tttfftfffLLLLLLLLLftffftfLftffffLLLftttttfffff1iii;;i;;i1i1i1tttt11111ttt1ttt1tfttt111tfffffLLfLfttt\n");
 		printf("ttfLffffffLLLLLLLffffLLfffffLfffLLLftttttttfft1i;;;;;;;iiiiitfft111111ffft11t11tt1tttttffffLLLLLffft\n");
@@ -219,9 +218,9 @@ int main()
 		printf("ttftttttttttttttffffLffttfffffffLLLftttttttttt11ttt1iiii;i11tttt111111ttttttf  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttfffLLttffffffLLffffttttttttttt1ttt;:,,,,,,,:itttt11111tfftf  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttffffttffftffffffffffttfftttttt1tttt11i:,,,,,,,,,:i111t1111111  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttffft1;::;;;;;;;;;,;t111111tt1 +#+#+#+#+#+   +#+   11ttttt\n");
-		printf("ttttttttffLLLLLLLffttfLLffttfffftfLLtttttffffff1,:iiii111111;:tt11111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLftffftttffLffftffttttfffffffi:;;;;;iiiii1;;ttt1111ttt1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttffft1;::;;;;;;;;;,;t111111tt1 +#+#+#+#+#+   +#+  _11ttttt\n");
+		printf("ttttttttffLLLLLLLffttfLLffttfffftfLLtttttffffff1,:iiii111111;:tt11111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLftffftttffLffftffttttfffffffi:;;;;;iiiii1;;ttt1111ttt1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffftffLLftfftttttfffffff1;;;;;;;ii;;ii1ttt11111111ttf                   ffttt\n");
 		printf("tttfftfffLLLLLLLLLffffftfLftffffLLLftttttfffff1iiiiii;;iiii1itttt11111ttt1ttt11tttt11ttfffffLLfLfttt\n");
 		printf("tffLLffffLLLLLLLLffffLLftffLLLffLLLftttttttffftiii;;;;;ii1ii1tft111111ffft11t11tt1tttttffffLLLLLffft\n");
@@ -263,9 +262,9 @@ int main()
 		printf("ttftttttttttttttffffLftttfffffffLLLft1tttttft111tfftttfttttttttt111111ttttttf  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttfffLfttffffffLLffffttttttttttt1ttti;;;;::;i1tttt111111tffff  +:+  +:+        +:+  t1\n");
 		printf("tttttttttttfffffttffftffffffffffttfftttttt1ttt111i,,,,,,,,,;11111t1111111  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttffft1i::,,,,,,,,,:1t11t111tt1 +#+#+#+#+#+   +#+   11ttttt\n");
-		printf("ttttttttffLLLLLLLffttfLLLfttfLfftfLLtttttfffffti:;;iiiiiiii::1tt11111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLftffftttffLffftfftttttffffft::;;iii1i111i:1ttt1111ttt1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttffft1i::,,,,,,,,,:1t11t111tt1 +#+#+#+#+#+   +#+  _11ttttt\n");
+		printf("ttttttttffLLLLLLLffttfLLLfttfLfftfLLtttttfffffti:;;iiiiiiii::1tt11111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLftffftttffLffftfftttttffffft::;;iii1i111i:1ttt1111ttt1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffftffLfftfftttttfffffft;;;;;;;iiiiii;tttt11111111ttf                   ffttt\n");
 		printf("tttfftfffLLLLLLLLLfttfftfLfffffffLLftttttfffft1ii;;;;;iiiiiitfttt11111ttt1ttt11tttt11ttfffffLLfLfttt\n");
 		printf("ttfLLfffffLLLLLLLfftfLLftfffLLffLLLftttttttfftiii;;i;;ii111itfft111111tfft11t11tt1tttttfffLLLLLLLfff\n");
@@ -307,9 +306,9 @@ int main()
 		printf("ttftttttttttttttffffLftttfffffffLLLft11tttfft111tfffffffttt1ttttt11111ttttttf  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttfffffttffffffLLffffttt1ttttttt1tt111ii11tft1ttttt11111tfftf  +:+  +:+        +:+  t1\n");
 		printf("ttttttttttttffffttfffttfffffffffttffftttt111ttt1:,,,,,,,:i1111111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttfLLfttttttftt1;:,,,,,,,,,;1tt111t1111t1 +#+#+#+#+#+   +#+   11ttttt\n");
-		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLLfttttffft1i;;;;;;;;;;::1tttt11111ttt      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLftffftttffLLfftfftttttffffi:;iii111111i:ittttt1111ttt1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttfLLfttttttftt1;:,,,,,,,,,;1tt111t1111t1 +#+#+#+#+#+   +#+  _11ttttt\n");
+		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLLfttttffft1i;;;;;;;;;;::1tttt11111ttt      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLftffftttffLLfftfftttttffffi:;iii111111i:ittttt1111ttt1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffftffLfftfftttttfffff;:;;;;iiiiiii:ittttt11111111ttt                   ffttt\n");
 		printf("tttffftffLLLLLLLLLfttfftfLftfffffLLftttttffff1i;;;;;ii;iiiittttft11111ttt1ttt1ttttt11ttfffffLLfLfttt\n");
 		printf("ttfLLfffffLLLLLLLfftfLLftfffLfffLLLftttttttf1i1i;i;;iiii1i1tffft111111tfft11t11tt1tttttfffLLLLLLffff\n");
@@ -351,9 +350,9 @@ int main()
 		printf("ttftttttttttttttffffLftttfffffffLLLftt1tttttt111ttfffffftttttttt111111tttttff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttfffLfttffffffLLffffttt1tttttt11tffffffffffttttttt11111tffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttffffttfffttfffffffffttffftttt11111111i;i11ttt11tt1111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttfLLfttttttfti:::,,,,:;i1ttfttt11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLLftttttft1;,,,,,,,,,,;tffffft11111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLfttfttttfLLfLftffttttfffti;:;;;;iii;::1fffffttt111ttt1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttfLLfttttttfti:::,,,,:;i1ttfttt11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLLftttttft1;,,,,,,,,,,;tffffft11111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLfttfttttfLLfLftffttttfffti;:;;;;iii;::1fffffttt111ttt1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffffffLfftfftttttfffi;;iiiii1111i:iffffftt11111111ttt                   ffttt\n");
 		printf("tttfftfffLLLLLLLLLftffftfLftffffLLLftttttffi:;;;;iiiiiii:1ftttfftt1111ttt1ttt1ttttt111tffffffLfLfttt\n");
 		printf("tffLLfffffLLLLLLLfftfLLftftfLfffLLLLttttt1t1i;;;;;ii;iiii1ttffft111111tfft1tt11tt1tt1ttfffLLLLLLffff\n");
@@ -395,9 +394,9 @@ int main()
 		printf("tfttttttttttttttffffLffttfffffffLLLft11tttttt111tfffffffttttttttt11111ttttfff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttfffLfttffffffLLffffttt1ttttttt1ttfffffffffttttttt1111ttfftf  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttffffttfffttffffffffftttfttttt111ttt1ttffffffttttt1111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLftttttfLLLfftttttffLftttttttt11ii11fffft1ttfftt11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLLfttttt1i:;:,,::;i1tttffffftt11111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLftffttttffLffftffttttfti:,,,,,,,,,:;tfffffttttt111tfttttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLftttttfLLLfftttttffLftttttttt11ii11fffft1ttfftt11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLLfttttt1i:;:,,::;i1tttffffftt11111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLftffttttffLffftffttttfti:,,,,,,,,,:;tfffffttttt111tftttt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffftffLfftffttttttti:::::;;;;;,,1ffttffttt11111111ttt                   ffttt\n");
 		printf("tttfftfffLLLLLLLLLfftfftffftffffLLLfttttti;iiiii11111;:1ttfffffftt1111ttt1ttt1tftttt11tfffffLLfLfttt\n");
 		printf("ttfLLffffLLLLLLLLfftfLLftttfffffLLLLttttt;;i;;iiiiii1;:i11tfffft111111ffft1tt11tt1tt1ttfffLLLLLLffff\n");
@@ -439,9 +438,9 @@ int main()
 		printf("ttttttttttttttttffffLffttfffffffLLLftt1tttttt111tfffffffftttttttt11111tttttff  :+:      :+:    :+: t\n");
 		printf("ttttttttttttttttfffffttffffffLLffffttttttttttt1tffffffffffttttttt11111tffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttffffttfffttfffffffffttffttttt1111tt1ttffffffttttt1111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttfffttttffffftttffftt11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLftttttt11i;;;;i1tftttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLftffttttffLLfftffttttti:::,,,,::;i1tffffffffttt111tft1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttfffttttffffftttffftt11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLftttttt11i;;;;i1tftttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLftffttttffLLfftffttttti:::,,,,::;i1tffffffffttt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffftffLfftfftttt11;,,,,,,,:,,,;tffffffffttt1111t11ttt                   ffttt\n");
 		printf("tttfftfffLLLLLLLLLftffftfLftffffLLLftttt1i;;;;iiiii:,:1tttfffffftt1111ttt1ttt1tfttt111tfffffLLfLfttt\n");
 		printf("ttfLfffffLLLLLLLLfftfLLftttfLfffLLLLttt1i1iiiii1111i::1111ttffft111111ffft1tt11tt1tt1ttfffLLLLLLffff\n");
@@ -483,9 +482,9 @@ int main()
 		printf("ttttttttttttttttffffLffttfffffffLLLftt1tttttt111tfffffffftttttttt11111tttttff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttfffffttffffffLLffffttttttttttt1tffffffffffttttttt1111ttffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttffffttfffttfffffffffttffftttt1111tt1ttffffffttttt1111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttfffft1ttfffftttffftt11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLftttttfttttttttttftttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLftffttttffLffftffttttt1ii::::;111tttffffffffttt111tft1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttfffft1ttfffftttffftt11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttffLLLLLLLffttfLLLfttfffftfLftttttfttttttttttftttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLftffttttffLffftffttttt1ii::::;111tttffffffffttt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffffffLfftffttttt1:,,,,,,,,:;ittffffffffttt1111t11ttt                   ffttt\n");
 		printf("tttffttffLLLLLLLLLftffftfLftffffLLLftttti::,::::::,,,;ttttfffffftt1111tft1ttt1tffttt11tfffffLLfLfttt\n");
 		printf("ttfLffffffLLLLLLLfftfLLftttfLfffLLLfftt11iiiii111i;,,;t111tfffft111111ffft1tt11ttttt1ttfffLLLLLLffff\n");
@@ -527,9 +526,9 @@ int main()
 		printf("ttttttttttttttttfffffftttfffffffLLLftt1tttttt111tfffffffftttttttt11111tttttff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttfffffttffffffLLffffttttttttttt1tffffffffffttttttt11111tffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttffffttfffttfffffffffttfftttttt11ttt1ttfffffftttttt11tt111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttfffft1tffffftttffftt11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLLfttfffftfLfttttttffffffttttftttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLftffttttfLLffftfftttttftttttttffttttffffffffftt111tfttttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttfffft1tffffftttffftt11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLLfttfffftfLfttttttffffffttttftttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLftffttttfLLffftfftttttftttttttffttttffffffffftt111tftttt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffffffffftffttttttiii;::::i1ttttffffffffftt1111t11ttt                   ffttt\n");
 		printf("tttffttffLLLLLLLLLftffftfLfttfffLLLfttt11:,,,,,,,:::itttttfffffft11111tft1ttt1tffttt11tfffffLLfLfttt\n");
 		printf("tffLffffffLLLLLLLfftfLLftttfLfffLLLLfttt1i::::,,::,,,itt11tfffft111111ffft1tt11tt1tt1ttffLLLLLLLffff\n");
@@ -571,9 +570,9 @@ int main()
 		printf("ttttttttttttttttffffLftttfffffffLLLfttttttttt111tfffffffftttttttt11111tttttff  :+:      :+:    :+: t\n");
 		printf("ttttttttttttttttfffffttffffffLLffffttt1ttttttt1tffffffffffttttttt11111tffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttffffttfffttfffffffffttfftttttt11ttt1ttfffffftttttt11tt111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttfffft1ttfffffttffftt11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLLfttfffftfLfttttttffffffttttffttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLfttfttttfLLffftfftttttfftffffffftttfffffffffftt111tft1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttfLftttttttfffft1ttfffffttffftt11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLLfttfffftfLfttttttffffffttttffttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLfttfttttfLLffftfftttttfftffffffftttfffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffffffffftfftttttt1iii::;i1ttttfffffffffftt1111t11ttt                   ffttt\n");
 		printf("ttttfttfLLLLLLLLLLfftfftfLfttfffLLLfttt11:,::,,,,,:;1tttttfffffftt1111tft1ttt1tffttt11tfffffLLLLfttt\n");
 		printf("ttffffffffLLLLLLLfftfLLftttfLLffLLLffttt1;:,,,,,,,,,;ttt11tfffft111111ffft1tt11ttttt1ttffLLLLLLLLfff\n");
@@ -615,9 +614,9 @@ int main()
 		printf("ttttttttttttttttffffLftttfffffffLLfftt1tttttt111tfffffffftttttttt11111tttttff  :+:      :+:    :+: t\n");
 		printf("ttttttttttttttttfffffttffffffLLLfffttt1ttttttt1tffffffffffttttttt11111tffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttffffttfffttffffffffftttftttttt11ttt1ttfffffftttttt11tt111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttfffttttt1tfffft1ttfffffttfffft11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLLfttfffftfLftttttttfffffftttffttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLfttfttttfLLffftffttttt111i;iitfftttfffffffffftt111tft1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttfffttttt1tfffft1ttfffffttfffft11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLLfttfffftfLftttttttfffffftttffttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLfttfttttfLLffftffttttt111i;iitfftttfffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffffffffftfftttt1;:,::,,,:;ittttffffffffftt1111t11ttt                   ffttt\n");
 		printf("tttffftfLLLLLLLLLLfttfftfffttfffLLLftt1i:,,,,,,,,,,:1tttttfffffftt1111tft1ttt1tffttt11tffffLLLLLfttt\n");
 		printf("ttffffffffLLLLLLLfftfLLftttfLLffLLLftt1i;;;;;;;i;:,:tftt11tfffft11111tffft1tt11ttttt1ttfffLLLLLLLfff\n");
@@ -659,9 +658,9 @@ int main()
 		printf("ttttttttttttttttffffLftttfffffffLLffttttttttt111tfffffffftttttttt11111ttttfff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttftfffffttffffffLLffffttttttttttt1tffffffffffttttttt1111ttffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttffffttfffttffffffffftttfttttt1111tt1ttffffffttttt1111tt11111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttffftttt11tttffttttfffffttfffft11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLLfttfffftfLftt11ii;i;;ii1tttffttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLfttfttttfLLffftfftt1:,,,,,,,,:iftttfffffffffftt111tft1ttt ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttffftttt11tttffttttfffffttfffft11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLLfttfffftfLftt11ii;i;;ii1tttffttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLfttfttttfLLffftfftt1:,,,,,,,,:iftttfffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffffffffftff1i;;:,,,,,,,,:;ttttfffffffffftt1111t11ttt                   ffttt\n");
 		printf("tttffftfLLLLLLLLLLfttfftfffttfffLLLt;,,:;;;;;iiii:ittttttffffffftt1111tft1ttt1tftttt11tffffLLLLLfttt\n");
 		printf("ttffffffffLLLLLLLfftfLLftttfLLffLLLfi,:iiii111111;1ffftt11tfffft11111tffftt1t1tttttt1ttfffLLLLLLffff\n");
@@ -703,9 +702,9 @@ int main()
 		printf("ttttttttttttttttffffLftttfffffffLLfft111ttttt111tfffffffftttttttt11111ttttfff  :+:      :+:    :+: t\n");
 		printf("ttttttttttttttttfffffttffffffLLLfffttt1ttttttt1tffffffffffttttttt1111ttffff  +:+  +:+        +:+  t1\n");
 		printf("ttttttttttttfffftttffttffffffffftttftt1t1iii11111tfffffftttttt11tt111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttffft11i:,,,::::;1tfffftttfffft11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLLfttfffftfft1;:,,,,,,,,,:tttttttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLfttfttttffLfftt1::,,,,,:::::;itfttttffffffffftt111tft1ttf ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttffft11i:,,,::::;1tfffftttfffft11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLLfttfffftfft1;:,,,,,,,,,:tttttttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLfttfttttffLfftt1::,,,,,:::::;itfttttffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttfLLLLLLLLLLfttttffftffffttf1,,,,:;iii1111itftttfffffffffftt1111t11ttf                   ffttt\n");
 		printf("tttffftfLLLLLLLLLLfttfftfffttffffft:,,,:;iii111ii1tttttttffffffftt1111tft1ttt1tftttt11tffffLLLLLfttt\n");
 		printf("ttffffffffLLLLLLLfftfLLftttfLfffLft:,,:;;;;iiiiii1tffftt11tfffft111111ffftt1t1tttttttttfffLLLLLLffff\n");
@@ -747,9 +746,9 @@ int main()
 		printf("ttttttttttttttttfffffftttfffffffLLLft111tttttt11tfffffffftttttttt11111ttttfff  :+:      :+:    :+: t\n");
 		printf("ttttttttttttttttfffffttfffffffffffft11111;:::;;i1tffffffffttttttt1111ttffff  +:+  +:+        +:+  t1\n");
 		printf("ttttttttttttfffftttffttffffffffftttft1;::,,,,,,,,ifffffftttttt11tt111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLfttttffLLLfftttttff1;:,,,,,,,,,,:itfffftttfffft11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLLfttfffttt1:,,,,:::;;i;;1tttftttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLfttfttttffLfftt;,,,,,:;ii11t11tfttttffffffffftt111tft1ttf ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLfttttffLLLfftttttff1;:,,,,,,,,,,:itfffftttfffft11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLLfttfffttt1:,,,,:::;;i;;1tttftttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLfttfttttffLfftt;,,,,,:;ii11t11tfttttffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttfLLLLLLLLLLfttttffffffffttt;,,,,:;;;iii1111ttttfffffffffftt1111t11ttf                   ffttt\n");
 		printf("tttffftfLLLLLLLLLLfttfftfffttttfft:,,,,:;;;iiiiii1tttttttffffffftt1111tft1ttt1tftttt11tffffLLLLLfttt\n");
 		printf("ttffffffffLLLLLLLfftfffftttfLftfLfi;;;;;;;iii1iii1tffftt11tfffft111111ffftt1t1tttttttttfffLLLLLLffff\n");
@@ -791,9 +790,9 @@ int main()
 		printf("ttttttttttttttttffffLftttfffffffffftt11111iii1i11ffffffffttttttt111111tttttff  :+:      :+:    :+: t\n");
 		printf("ttttttttttttttttffffftttffffffffffttt11;::,,,,,:;1ffffffffttttttt1111ttffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttfffftttffttffffffffttttt1;:,,,,,,,,,,:tffffftttttt111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLftttttffLLfttttttft;,,,,,,,,:::,:itfffftttfffft11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttffLLLLLLLffttfLLLfttfffttt;,,,,,,:;ii1111tttttttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLffttfttttffffft1:,,,,,:;iii11111fttttffffffffftt111tft1ttf ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLftttttffLLfttttttft;,,,,,,,,:::,:itfffftttfffft11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttffLLLLLLLffttfLLLfttfffttt;,,,,,,:;ii1111tttttttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLffttfttttffffft1:,,,,,:;iii11111fttttffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttfLLLLLLLLLffttttffftfffftt1:,,,,,:;;;iiiii1ftttfffffffffftt1111t11ttf                   ffttt\n");
 		printf("tttffttfLLLLLLLLLLfttfttffftttttft::;;::;;iiiiiii1ttttttttfffffftt1111tft1ttt1tffttt11tffffLLLLLfttt\n");
 		printf("ttffffffffLLLLLLffftfffttttffftfLfi:;i;;;;;iiiiii1tffftt11tfffft111111ffftt1tt1tt1tttttfffLLLLLLffff\n");
@@ -835,9 +834,9 @@ int main()
 		printf("tttttttttttttttttffffftttffffffffffft111tt111111ttffffffttttttttt11111tttttff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttffffftttffffffLffftt111i;;:::::;1tffffffffttttttt11111tffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttfffftttffttffffffffttttt1i;,,,,,,,,,,;fffffftttttt111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLftttttffLLftttttttti:,,,,,,,,,,,,;tfffftttfffft11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttffLLLLLLLffttfLLffttfffttti,,,,,,:;;;ii;itttttttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLfttfttttffffft1:,,,,::;i111tt1tfttttffffffffftt111tft1ttf ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLftttttffLLftttttttti:,,,,,,,,,,,,;tfffftttfffft11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttffLLLLLLLffttfLLffttfffttti,,,,,,:;;;ii;itttttttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLfttfttttffffft1:,,,,::;i111tt1tfttttffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttfLfLLLLLLLLfttttffftfffftti,,,,,,:;;iiii1i1ftttfffffffffft11111t11ttf                   Lfttt\n");
 		printf("tttffttfLLLLLLLLLLfttfttffftttttf1,,::,:;iiiiiiii1ttttttttfffffftt1111tft1ttt1ttfttt11tffffLLLLLfttt\n");
 		printf("ttfffftfffLLLLLfffftfffttttffftfLf;:ii;;;;iii11ii1tfffft11tfffft111111ffft11t1ttt1tt1tffffLLLLLLLfff\n");
@@ -879,9 +878,9 @@ int main()
 		printf("tttttttttttttttttffffftttffffffffffft1111tttt111ttffffffttttttttt11111tttttff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttffffftttffffffLffftt11111i;iiii1tfffffffffttttttt11111tffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttfffftttffttffffffffttttt11;::,,,,,,::1fffffftttttt111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLftttttffLLftttttttf1;:,,,,,,,,,,,itfffftttfffft11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLffttfffttt1,,,,,,,::::::itttftttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLfttfttttffLfft1:,,,,,:;ii11111ffttttffffffffftt111tft1ttf ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLftttttffLLftttttttf1;:,,,,,,,,,,,itfffftttfffft11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLffttfffttt1,,,,,,,::::::itttftttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLfttfttttffLfft1:,,,,,:;ii11111ffttttffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttfLfLLLLLLLLfttttffftfffftt1:,,,,:;;iii1111fftttfffffffffftt1111111ttf                   ffttt\n");
 		printf("tttffttfLLLLLLLLLLfttfttffftttttf1,,,,,:;iiii;iii1ttttttttfffffftt1111ttt1ttt1ttfttt11tfffffLLLLfttt\n");
 		printf("ttfffftfffLLLLLfffftfffttttffftfLt:;;;:;;iiiiiii11tfffft11tfffft111111ffft1tt1ttt1tt1tfffLLLLLLLffff\n");
@@ -923,9 +922,9 @@ int main()
 		printf("tttttttttttttttttffffftttffffffffffft1111tttt111tfffffffttttttttt11111tttttff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttffffftttffffffLfffttt1111ttttt1tffffffffffttttttt11111tffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttfffftttftttffffffffttttft1i;:;;;;;i11tfffffftttttt111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLftttttffLLfttttttfft1;:,,,,,,,,:1ttfffftttfffft11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLffttfffttti::,,,,,,,,,,;ttttftttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLfttfttttfffffti,,,,::;;;iiiii1ffttttffffffffftt111tft1ttf ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLftttttffLLfttttttfft1;:,,,,,,,,:1ttfffftttfffft11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLffttfffttti::,,,,,,,,,,;ttttftttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLfttfttttfffffti,,,,::;;;iiiii1ffttttffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttfLLLLLLLLLLftttttfftfffftt1:,,,;iii1111111fftttfffffffffftt1111111ttf                   ffttt\n");
 		printf("tttffttfffLLLLLLLLfttfttffftttttff:,,:;;;iiii1ii1tttttttttfffffftt1111ttt1ttt1ttfttt11tfffffLLLLfttt\n");
 		printf("ttfffftfffLLLLLfffttfffttttffftfLt;:,:;;;;iiiiii11tfffft11tfffft11111tffft1tt11tt1ttttfffLLLLLLLffff\n");
@@ -967,9 +966,9 @@ int main()
 		printf("ttttttttttttttttfffffftttffffffffffftt11ttttt111tffffffftttttttt11111ttttttff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttffffftttffffffLfffttttt11tttt11tffffffffffttttttt1111ttffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttfffftttffttffffffffftttft1tttt11ttt1ttfffffftttttt111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLftttttffLLftttttttfft11iiiiiittt1ttfffffttfffft11t111tt1 +#+#+#+#+#+   +#+   1tttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLffttfffttfft;::,,,,,,:itttttffttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLLfttfttttffffft11i:,,,,,,,,:,;fffttttffffffffftt111tft1ttf ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLftttttffLLftttttttfft11iiiiiittt1ttfffffttfffft11t111tt1 +#+#+#+#+#+   +#+  _1tttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLffttfffttfft;::,,,,,,:itttttffttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLLfttfttttffffft11i:,,,,,,,,:,;fffttttffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttfffttffftt1;:::::;;;iii;:tfftttfffffffffftt1111111ttf                   ffttt\n");
 		printf("tttffttfffLLLLLLLLfttfttfLfttttfft;:;iii111111i;1ttttttttffffffftt1111ttt1ttt1ttftt11ttfffffLLLLfttt\n");
 		printf("ttfffftfffLLLLLLffftfffttttfffffLf;:;;;;ii1iiiii11tfffft11tfffft11111tffft1tt11tt1ttttfffLLLLLLLffff\n");
@@ -1011,9 +1010,9 @@ int main()
 		printf("ttttttttttttttttffffLffttfffffffffffttttttttt111tffffffffttttttt111111ttttfff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttffffftttffffffLffffttttttttttt1tffffffffffttttttt1111ttffff  +:+  +:+        +:+  tt\n");
 		printf("ttttttttttttfffftttffttffffffffftttftttttt11ttt1ttfffffftttttt111t111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLftttttfLLLftttttttfftttttttfffft1tffffftttfffft11t111tt1 +#+#+#+#+#+   +#+   11ttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLLfttfffftffft11i;ii1ttffttttffttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLffttfttttffLfLftti;:;:,,,:;;itffftttfffffffffftt111tft1ttf ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLftttttfLLLftttttttfftttttttfffft1tffffftttfffft11t111tt1 +#+#+#+#+#+   +#+  _11ttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLLfttfffftffft11i;ii1ttffttttffttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLffttfttttffLfLftti;:;:,,,:;;itffftttfffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffftffffftt1;,,,,,,,,::,:tfftttfffffffffftt1111111ttf                   ffttt\n");
 		printf("tttffttfffLLLLLLLLfttfftfLftttffff1;::::;;iii;,:1ttttttttffffffftt1111ttt1ttt1ttfttt1ttfffffLLLLfttt\n");
 		printf("ttfffftfffLLLLLfffftfffftttfLfffLfi;iiii11111i;:i1tfffft11tfffft11111tffft1tt11tt1ttttfffLLLLLLLffff\n");
@@ -1055,9 +1054,9 @@ int main()
 		printf("ttttttttttttttttffffLffttfffffffffffttttttttt111tfffffffftttttttt11111tttttff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttfffffttfffffffLffffttttttttttt1tffffffffffttttttt1111ttffff  +:+  +:+        +:+  t1\n");
 		printf("ttttttttttttfffftttftttffffffffftttfttttt111ttt1ttfffffftttttt111tt11111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLftttttfLLLftttttttffttttttttffft1tffffftttfffft11tt11tt1 +#+#+#+#+#+   +#+   11ttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLffttfffftfffttttttfffffftfttffttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLffttfttttffffffttft111i;ii1ttfffftttffffffffffft111tft1ttf ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLftttttfLLLftttttttffttttttttffft1tffffftttfffft11tt11tt1 +#+#+#+#+#+   +#+  _11ttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLffttfffftfffttttttfffffftfttffttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLffttfttttffffffttft111i;ii1ttfffftttffffffffffft111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffffffffftft1i:::,,,,::;;1fftttfffffffffftt1111111ttf                   ffttt\n");
 		printf("tttffttfffLLLLLLLLfttfftfLffftfffLf1;,,,,,,,::,,:1tttttttffffffftt1111ttt1ttt1ttfttt1ttfffffLLLLfttt\n");
 		printf("ttfLfftfffLLLLLfffftfLfftttfffffLLf1;;;;;iiiii:,:1tfffft11tfffft11111tffft1tt11tt1ttttfffLLLLLLLffff\n");
@@ -1099,9 +1098,9 @@ int main()
 		printf("ttttttttttttttttffffLffttfffffffffffttttttttt111tfffffffftttttttt11111tttttff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttfffffttfffffffLfffftttttttttt11tffffffffffttttttt1111ttffff  +:+  +:+        +:+  t1\n");
 		printf("ttttttttttttfffftttftttffffffffftttfttttt111ttt1ttfffffftttttt111tt11111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLftttttfLLLftttttttffttttttttffft1ttfffffttfffft11tt11tt1 +#+#+#+#+#+   +#+   11ttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLLfttfffftffftttttfffffffffttffttffffffftt1111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLffttfttttffLffftfftttttfftffffffftttffffffffffft111tft1ttf ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLftttttfLLLftttttttffttttttttffft1ttfffffttfffft11tt11tt1 +#+#+#+#+#+   +#+  _11ttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLLfttfffftffftttttfffffffffttffttffffffftt1111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLffttfttttffLffftfftttttfftffffffftttffffffffffft111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffffffffftfftt11iii;:;;i1tfftttfffffffffftt1111111ttf                   ffttt\n");
 		printf("tttffttfLLLLLLLLLLfttfftfLffttfffLLft1;:::,,,,::;;1ttttttffffffftt1111ttt1ttt1ttfttt1ttffffLLLLLfttt\n");
 		printf("ttfLLftfffLLLLLLLfftfLfftttfLfffLLLfti;,,,,:::::,,;fffft11tfffft11111tffft1tt11tt1ttttfffLLLLLLLffff\n");
@@ -1143,9 +1142,9 @@ int main()
 		printf("ttttttttttttttttffffLffttfffffffffffttttttttt111tfffffffftttttttt11111tttttff  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttfffffttfffffffLfffftttttttttt11tffffffffffttttttt11111tffff  +:+  +:+        +:+  t1\n");
 		printf("ttttttttttttfffftttffttffffffffftttfttttt111ttt1ttfffffftttttt11tt111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLftttttfLLLfttttttffffttttttfffft1tffffffttfffft11t111tt1 +#+#+#+#+#+   +#+   11ttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLLfttfffftfffttttttfffffftfttfftffffffffttt111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfLfLLLLLLLLffttfttttffLLfftffttttffffffffffftttfffffffffftt111tft1ttf ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLftttttfLLLfttttttffffttttttfffft1tffffffttfffft11t111tt1 +#+#+#+#+#+   +#+  _11ttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLLfttfffftfffttttttfffffftfttfftffffffffttt111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfLfLLLLLLLLffttfttttffLLfftffttttffffffffffftttfffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffffffLLftffttttttt11i;ii1tftttfffffffffftt1111111ttf                   ffttt\n");
 		printf("tttffttfLLLLLLLLLLfttfftfffffffffLLfttt1i;::,,,,:;;1tttttffffffftt1111ttt1ttt1ttfttt1ttfffffLLLLfttt\n");
 		printf("ttfLLftfffLLLLLLLfftfLfftttfLfffLLLLttt1;,,,,,,,::,:iftt11tfffft11111tffft1tt11tt1ttttfffLLLLLLLLfff\n");
@@ -1187,9 +1186,9 @@ int main()
 		printf("ttftttttttttttttffffLffttfffffffLfffttttttttt111tfffffffftttttttt11111ttttttf  :+:      :+:    :+: 1\n");
 		printf("ttttttttttttttttfffffttfffffffLfffftttttttttt11tffffffffffttttttt11111tffff  +:+  +:+        +:+  t1\n");
 		printf("tttttttttttffffftttffttffffffffftttfttttt111ttt1ttfffffftttttt11tt111111t  +#+  +:+       +#+   tttt\n");
-		printf("ttttttttttffLLLLftttttfLLLfttttttffLftttttttffft1ttfffffttfffft11t111tt1 +#+#+#+#+#+   +#+   11ttttt\n");
-		printf("ttttttttfffLLLLLLffttfLLLfttfffftfLfttttttffffffffftftttfffffffttt111tft      #+#    #+#       ttttt\n");
-		printf("tttttttfffLLLLLLLLffttfttttfLLLfftffttttffftt1iii11tttfffffffffftt111tft1ttf ###   ########### ttttt\n");
+		printf("ttttttttttffLLLLftttttfLLLfttttttffLftttttttffft1ttfffffttfffft11t111tt1 +#+#+#+#+#+   +#+  _11ttttt\n");
+		printf("ttttttttfffLLLLLLffttfLLLfttfffftfLfttttttffffffffftftttfffffffttt111tft      #+#    #+#   °°  ttttt\n");
+		printf("tttttttfffLLLLLLLLffttfttttfLLLfftffttttffftt1iii11tttfffffffffftt111tft1tt\\ ###   ########### ttttt\n");
 		printf("tttttttffLLLLLLLLLfttttffffffLffffftttttfti;;::,,,:;i1tffffffffftt1111111ttf                   ffttt\n");
 		printf("tttfffffLLLLLLLLLLfttfftfLfffffffLLfttttt1;,,,,,,,::,:ittffffffftt1111ttt1ttt1tftttt1ttffffLLLLLfttt\n");
 		printf("ttfLLffffLLLLLLLLfftfLfftttfLfffLLLLfttt1i;:::;;iiii;,;t11tfffft11111tffft1tt1ttt1ttttfffLLLLLLLLfff\n");
